@@ -3,7 +3,66 @@ layout: default
 title: Home
 ---
 
-{% for post in paginator.posts %}
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.banner{
+    max-width: 100%;
+    height: 100px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="banner" style="background-color:light-blue;"></div>
+
+
+<div class="row">
+  <div class="column left" style="background-color:light-blue;">
+    <h2>Welcome</h2>
+    <p>Hi! Welcome to my personal page. You’ll find here my CV, list of publications, 
+	the (GitHub) projects I am working on and (in due time) some useful blog posts 
+	related to python and geospatial analysis.</p>
+  </div>
+  <div class="column right" style="background-color:#white;">
+	<a class="twitter-timeline" data-width="250" data-height="500" data-theme="light" href="https://twitter.com/ElcoKoks?ref_src=twsrc%5Etfw">Tweets by ElcoKoks</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  </div>
+</div>
+
+
+</body>
+
+<!--{% for post in paginator.posts %}
 
 <article>
   <a href="{{ site.github.url }}{{ post.url }}">
@@ -13,9 +72,9 @@ title: Home
   </a>
 </article>
 
-{% endfor %}
+{% endfor %}-->
 
-<!-- Pagination links -->
+<!-- Pagination links 
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
@@ -29,3 +88,4 @@ title: Home
       <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
   {% endif %}
 </div>
+-->
